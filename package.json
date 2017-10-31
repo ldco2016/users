@@ -1,0 +1,16 @@
+{
+  "name": "users",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Luis Daniel Cortes <renaissance.scholar2012@gmail.com> (http://www.dancortes-portfolio.herokuapp.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "4.0.1",
+    "mongoose": "4.12.1",
+    "nodemon": "1.12.1"
+  }
+}
