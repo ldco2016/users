@@ -8,3 +8,7 @@ mongoose.connection
   .on('error', (error) => {
     console.warn('Warning', error);
   });
+
+beforeEach(() => {
+  mongoose.connection.collections.users.drop();
+});
