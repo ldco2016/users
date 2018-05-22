@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "nodemon --exec 'mocha -R min'"
   },
-  "author": "Luis Daniel Cortes <renaissance.scholar2012@gmail.com> (http://www.dancortes-portfolio.herokuapp.com/)",
+  "author":
+    "Luis Daniel Cortes <renaissance.scholar2012@gmail.com> (http://www.dancortes-portfolio.herokuapp.com/)",
   "license": "MIT",
   "dependencies": {
     "mocha": "4.0.1",
