@@ -31,7 +31,7 @@ describe('Association', () => {
       });
   });
 
-  it('saves a full relation graph', () => {
+  it('saves a full relation graph', done => {
     User.findOne({ name: 'Joe' })
       .populate({
         path: 'blogPosts',
@@ -44,14 +44,10 @@ describe('Association', () => {
           }
         }
       })
-      .exec()
       .then(user => {
         assert(user.name === 'Joe');
         assert(user.blogPosts[0].title === 'Eloquent JavaScript');
-        assert(
-          user.blogPosts[0].comments[0].content ===
-            'As programs get bigger, they also become more complex'
-        );
+        assert(user.blogPosts[0].comments[0].content === 'Love this post');
         assert(user.blogPosts[0].comments[0].user.name === 'Joe');
         done();
       });
